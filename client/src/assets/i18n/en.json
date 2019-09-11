@@ -1,0 +1,30 @@
+{
+    "NAVBAR": {
+    "Login":"Login",
+    "Register":"Register",
+    "Select":"Lang"
+    },
+    "IDENTIFY":{
+        "userName":"User Name",
+        "Password":"Password",
+        "ConfirmPassword":"Password",
+        "Email":"Email"
+    },
+    "VALIDATION":{
+        "userName":"userName is required",
+        "userNameCharacters":"User name should be at least 6 charachters",
+        "Email":"Email is required",
+        "ValidEmail":"Email must be a valid email address",
+        "Password":"Password is required",
+        "PasswordCharacters":"Password must be at least 6 characters",
+        "ConfirmPassword":"Confirm Password is required",
+        "PasswordMatch":"Passwords must match"
+    },
+    "FormActions": {
+        "Register": "Register",
+        "Login":"Login",
+        "Cancel": "Cancel"
+    
+      }
+    
+}

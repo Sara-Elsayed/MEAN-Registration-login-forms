@@ -1,0 +1,8 @@
+<label for="">
+        {{"NAVBAR.Select" | translate}}
+<select #select (change)="langaugeSelectHandler(select.value)">
+    <option selected>select language</option>
+    <option value="ar">عربي</option>
+    <option value="en">english</option>
+</select>
+</label>

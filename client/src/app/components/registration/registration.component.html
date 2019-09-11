@@ -1,0 +1,58 @@
+<!-- main app container -->
+<div class="card m-3" fxLayout="row" fxLayoutAlign="center center">
+  <div class="card-body">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          
+              <div class="form-group">
+                  <label>{{"IDENTIFY.userName" | translate}}</label>
+                  <input type="text" formControlName="userName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" />
+                  <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                      <div *ngIf="f.userName.errors.required">{{"VALIDATION.userName" | translate}}</div>
+                      <div *ngIf="f.userName.errors.minlength">{{"VALIDATION.userNameCharacters" | translate}}</div>
+
+                  </div>
+              </div>
+          
+          <div class="form-group">
+              <label>{{"IDENTIFY.Email" | translate}}</label>
+              <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">{{"VALIDATION.Email" | translate}}</div>
+                  <div *ngIf="f.email.errors.email">{{"VALIDATION.ValidEmail" | translate}}</div>
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group col">
+                  <label>{{"IDENTIFY.Password" | translate}}</label>
+                  <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required">{{"VALIDATION.Password" | translate}}</div>
+                      <div *ngIf="f.password.errors.minlength">{{"VALIDATION.PasswordCharacters" | translate}}</div>
+                  </div>
+              </div>
+              <div class="form-group col">
+                  <label>{{"IDENTIFY.ConfirmPassword" | translate}}</label>
+                  <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                  <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                      <div *ngIf="f.confirmPassword.errors.required">{{"VALIDATION.ConfirmPassword" | translate}}</div>
+                      <div *ngIf="f.confirmPassword.errors.mustMatch">{{"VALIDATION.PasswordMatch" | translate}}</div>
+                  </div>
+              </div>
+          </div>
+          <div class="text-center">
+              <button  type="submit" class="btn btn-primary mr-1">{{"FormActions.Register" | translate}}</button>
+              <button class="btn btn-secondary" type="reset" (click)="onReset()">{{"FormActions.Cancel" | translate}}</button>
+          </div>
+      </form>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="success" *ngIf="showSucessMessage">
+    Saved successfully
+  </div>
+  
+  <!-- Error message -->
+  <div class="alert" *ngIf="serverErrorMessages">
+    {{serverErrorMessages}}
+  </div>
