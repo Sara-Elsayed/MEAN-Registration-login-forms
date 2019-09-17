@@ -11,13 +11,17 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
 
   title = 'RootsProject';
-  constructor(private languageService: LanguageService, private translate: TranslateService) {
+  constructor(private languageService: LanguageService) {
     //set language to english when the appliation starts
-    this.languageService.changeLanguage('en');
-   }
+    let lang = localStorage.getItem('lang')
+    if (!lang) {
+      this.languageService.changeLanguage('en')
+    }else{
+      this.languageService.changeLanguage(lang)
 
+    }
+   }
   changeLang(lang){
-    this.translate.use(lang);
     this.languageService.changeLanguage(lang);
   }
 

@@ -6,23 +6,25 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LanguageService {
 
-  dir;
-  html = document.documentElement;
+  
+  
 
   constructor(private translateService: TranslateService) { }
 
 
   changeLanguage(lang){
+    let dir;
+    let html = document.documentElement;
     if(lang == 'en'){
-      this.dir = 'ltr';
+      dir = 'ltr';
     }else{
-      this.dir = 'rtl'
+      dir = 'rtl'
     }
-
-    this.html.setAttribute('lang', lang);
-    this.html.setAttribute('dir', this.dir);
+    html.setAttribute('lang', lang);
+    html.setAttribute('dir', dir);
 
     this.translateService.setDefaultLang(lang);
     this.translateService.use(lang);
+    localStorage.setItem('lang',lang)
   }
 }
