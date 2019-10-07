@@ -1,16 +1,2 @@
-<mat-toolbar color="primary" class="app-header">
-  <div><a href="#" target="_blank" class="positronx">Roots</a></div>
-  <span class="nav-tool-items">
-    <a mat-button routerLink="/login" routerLinkActive="active">{{"NAVBAR.Login" | translate}}</a>
-    <a mat-button mat-raised-button routerLink="/register"
-      routerLinkActive="active">{{"NAVBAR.Register" | translate}}</a>
-  </span>
-  <button mat-button [matMenuTriggerFor]="menu">
-    <mat-icon>language</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item [value]="en" (click)="changeLang('en')">English</button>
-    <button mat-menu-item [value]="ar" (click)="changeLang('ar')">عربي</button>
-  </mat-menu>
-</mat-toolbar>
+<app-navbar></app-navbar>
 <router-outlet></router-outlet>

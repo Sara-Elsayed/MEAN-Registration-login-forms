@@ -1,4 +1,8 @@
 
+@import "../variables.scss";
 .app-header{
     direction: auto;
+}
+mat-toolbar{
+    background-color: $main-color
 }

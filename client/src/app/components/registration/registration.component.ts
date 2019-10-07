@@ -49,13 +49,13 @@ export class RegistrationComponent implements OnInit {
     }
 
     // display form values on success
-    // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
 
     this.userService.postUser(this.registerForm.value).subscribe(
       res => {
         this.showSucessMessage = true;
         setTimeout(() => (this.showSucessMessage = false), 4000);
-        this.resetForm(this.registerForm);
+        // this.resetForm(this.registerForm);
       },
       err => {
         if (err.status === 422) {
@@ -66,18 +66,18 @@ export class RegistrationComponent implements OnInit {
       }
     );
   }
-  resetForm(form: FormGroup) {
-    this.userService.selectedUser = {
-      userName: "",
-      email: "",
-      password: ""
-    };
-    form.value.resetForm();
-    this.serverErrorMessages = "";
-  }
+  // resetForm(form: FormGroup) {
+  //   this.userService.selectedUser = {
+  //     userName: "",
+  //     email: "",
+  //     password: ""
+  //   };
+  //   form.value.resetForm();
+  //   this.serverErrorMessages = "";
+  // }
 
-  onReset() {
-    this.submitted = false;
-    this.registerForm.reset();
-  }
+  // onReset() {
+  //   this.submitted = false;
+  //   this.registerForm.reset();
+  // }
 }

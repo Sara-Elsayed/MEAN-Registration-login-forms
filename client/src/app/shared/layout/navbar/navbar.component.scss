@@ -1,0 +1,19 @@
+.navbar {
+    background-color: transparent;
+    .nav-item {
+        color: white;
+    }
+}
+
+.top-nav-collapse {
+    background-color: #4285F4;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #4285F4;
+    }
+}
+.language--style{
+    margin-inline-start: auto;
+}

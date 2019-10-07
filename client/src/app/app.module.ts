@@ -14,9 +14,21 @@ import { HttpClientModule, HttpClient } from '@angular/common/http' ;
 
 
 import { AppComponent } from './app.component';
+
 import { LoginModule } from './components/login/login.module';
-import { SettingsModule } from './settings/settings.module';
 import { RegistrationModule } from './components/registration/registration.module';
+import { SettingsModule } from './settings/settings.module';
+
+import { CountryFormComponent } from './components/country-form/country-form.component';
+
+import { PersonalInfoComponent } from './components/user-forms/personal-info/personal-info.component';
+import { IdentityCardComponent } from './components/user-forms/identity-card/identity-card.component';
+
+import { HomeComponent } from './pages/home/home.component';
+import { FormsComponent } from './pages/forms';
+
+import { ModalModule } from './components/modal';
+import { NavbarComponent } from './shared/layout/navbar/navbar.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -25,7 +37,15 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
+    CountryFormComponent,
+    PersonalInfoComponent,
+    IdentityCardComponent,
+
+    HomeComponent,
+    FormsComponent,
+    NavbarComponent
   
   ],
   imports: [
@@ -38,6 +58,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularMaterialModule,
     FlexLayoutModule,
     HttpClientModule,
+    ModalModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

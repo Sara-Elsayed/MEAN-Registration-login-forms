@@ -42,6 +42,10 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
 
     onSubmit() {
+      // stop here if form is invalid
+      if (this.loginForm.invalid) {
+          return;
+      }
         this.submitted = true;
         this.userService.login(this.f.value).subscribe(
           res => {
@@ -53,10 +57,6 @@ export class LoginComponent implements OnInit {
           }
         );
         
-        // stop here if form is invalid
-        if (this.loginForm.invalid) {
-            return;
-        }
     }
     
 }

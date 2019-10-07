@@ -1,0 +1,44 @@
+<div class="container forms">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <button class="btn" (click)="openModal('modal-1')">Personal Info</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <button class="btn" (click)="openModal('modal-2')">Identity Card</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <button class="btn" (click)="openModal('modal-3')">Personal Info</button>
+        </div>
+    </div>
+    <div class="devider__rows"></div>
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <button class="btn" (click)="openModal('modal-1')">Personal Info</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <button class="btn" (click)="openModal('modal-2')">Identity Card</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <button class="btn" (click)="openModal('modal-3')">Personal Info</button>
+        </div>
+    </div>
+</div>
+
+<app-modal id="modal-1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <app-personal-info></app-personal-info>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-end">
+            <button class="btn btn-success">Save</button>
+            <button class="btn btn-danger" (click)="closeModal('modal-1');">Close</button>
+        </div>
+    </div>
+</app-modal>
+<app-modal id="modal-2">
+    <h1>A Custom Modal!</h1>
+    <p>Home page text: <input type="text" /></p>
+    <button class="btn btn-info" (click)="closeModal('modal-2')">Identity card</button>
+</app-modal>

@@ -1,30 +1,39 @@
 {
     "NAVBAR": {
-    "Login":"Login",
-    "Register":"Register",
-    "Select":"Lang"
+        "Login": "Login",
+        "Register": "Register",
+        "Select": "Lang"
     },
-    "IDENTIFY":{
-        "userName":"User Name",
-        "Password":"Password",
-        "ConfirmPassword":"Password",
-        "Email":"Email"
+    "IDENTIFY": {
+        "userName": "Your Name",
+        "Password": "Password",
+        "ConfirmPassword": "Confirm Password",
+        "Email": "Email"
     },
-    "VALIDATION":{
-        "userName":"userName is required",
-        "userNameCharacters":"User name should be at least 6 charachters",
-        "Email":"Email is required",
-        "ValidEmail":"Email must be a valid email address",
-        "Password":"Password is required",
-        "PasswordCharacters":"Password must be at least 6 characters",
-        "ConfirmPassword":"Confirm Password is required",
-        "PasswordMatch":"Passwords must match"
+    "VALIDATION": {
+        "userName": "User name is required",
+        "userNameCharacters": "User name should be at least 6 charachters",
+        "Email": "Email is required",
+        "ValidEmail": "Email must be a valid email address",
+        "Password": "Password is required",
+        "PasswordCharacters": "Password must be at least 6 characters",
+        "ConfirmPassword": "Confirm Password is required",
+        "PasswordMatch": "Passwords must match"
     },
     "FormActions": {
         "Register": "Register",
-        "Login":"Login",
+        "Login": "Login",
         "Cancel": "Cancel"
-    
-      }
-    
+    },
+    "CountryForm": {
+        "Title": "Please fill out the form for the Country you want to add ",
+        "CountryName": "Country name",
+        "Capital": "Capital",
+        "Continent": "Continent",
+        "Language": "Official language",
+        "CurrencyCode": "Currency code",
+        "CountryArea": "Country area",
+        "PhoneCode": "Phone code",
+        "MesuringSystem": "Mesuring system used"
+    }
 }

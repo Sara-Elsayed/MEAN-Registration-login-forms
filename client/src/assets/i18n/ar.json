@@ -24,6 +24,16 @@
     "Register": "التسجيل",
     "Login":"تسجيل الدخول",
     "Cancel": "إلغاء"
-
-  }
+  },
+  "CountryForm": {
+    "Title":"من فضلك ادخل بيانات البلد التي تريد إضافتها",
+    "CountryName":"إسم الدولة",
+    "Capital":"العاصمة",
+    "Continent":"القارة",
+    "Language":"اللغة الرسمية للدولة",
+    "CurrencyCode":"العملة",
+    "CountryArea":"المساحة",
+    "PhoneCode" : "كود الدولة",
+    "MesuringSystem":"وحدة القياس المستخدمة"
+}
 }

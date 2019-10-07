@@ -1,0 +1,20 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" [style.background-color]="navColor">
+        <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav language--style">
+            <li class="nav-item active">
+              <button mat-button [matMenuTriggerFor]="menu">
+                <mat-icon>language</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item [value]="en" (click)="changeLang('en')">English</button>
+                <button mat-menu-item [value]="ar" (click)="changeLang('ar')">عربي</button>
+              </mat-menu>
+              <span class="sr-only">(current)</span>
+            </ul>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>

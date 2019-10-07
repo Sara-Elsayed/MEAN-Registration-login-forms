@@ -5,14 +5,9 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class LanguageService {
+constructor(private translateService: TranslateService) { }
 
-  
-  
-
-  constructor(private translateService: TranslateService) { }
-
-
-  changeLanguage(lang){
+changeLanguage(lang){
     let dir;
     let html = document.documentElement;
     if(lang == 'en'){

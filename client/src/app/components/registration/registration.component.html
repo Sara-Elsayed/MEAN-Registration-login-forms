@@ -5,8 +5,8 @@
           
               <div class="form-group">
                   <label>{{"IDENTIFY.userName" | translate}}</label>
-                  <input type="text" formControlName="userName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" />
-                  <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                  <input type="text" formControlName="userName" class="form-control" [ngClass]="{ 'is-invalid': f.userName.errors && ( f.userName.dirty || f.userName.touched )  }" />
+                  <div *ngIf="f.userName.invalid && ( f.userName.dirty || f.userName.touched )" class="invalid-feedback">
                       <div *ngIf="f.userName.errors.required">{{"VALIDATION.userName" | translate}}</div>
                       <div *ngIf="f.userName.errors.minlength">{{"VALIDATION.userNameCharacters" | translate}}</div>
 
@@ -15,33 +15,34 @@
           
           <div class="form-group">
               <label>{{"IDENTIFY.Email" | translate}}</label>
-              <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': f.email.errors && (f.email.dirty || f.email.touched) }" />
+              <div *ngIf="f.email.errors && (f.email.dirty || f.email.touched)" class="invalid-feedback">
                   <div *ngIf="f.email.errors.required">{{"VALIDATION.Email" | translate}}</div>
                   <div *ngIf="f.email.errors.email">{{"VALIDATION.ValidEmail" | translate}}</div>
               </div>
           </div>
-          <div class="form-row">
-              <div class="form-group col">
+          <!-- <div class="form-row"> -->
+              <div class="form-group">
                   <label>{{"IDENTIFY.Password" | translate}}</label>
-                  <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': f.password.errors && ( f.password.dirty || f.password.touched ) }" />
+                  <div *ngIf="f.password.errors && ( f.password.dirty || f.password.touched )" class="invalid-feedback">
                       <div *ngIf="f.password.errors.required">{{"VALIDATION.Password" | translate}}</div>
                       <div *ngIf="f.password.errors.minlength">{{"VALIDATION.PasswordCharacters" | translate}}</div>
                   </div>
               </div>
-              <div class="form-group col">
+          
+              <div class="form-group">
                   <label>{{"IDENTIFY.ConfirmPassword" | translate}}</label>
-                  <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
-                  <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                  <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': f.confirmPassword.errors && ( f.confirmPassword.dirty || f.confirmPassword.touched ) }" />
+                  <div *ngIf="f.confirmPassword.errors && ( f.confirmPassword.dirty || f.confirmPassword.touched )" class="invalid-feedback">
                       <div *ngIf="f.confirmPassword.errors.required">{{"VALIDATION.ConfirmPassword" | translate}}</div>
                       <div *ngIf="f.confirmPassword.errors.mustMatch">{{"VALIDATION.PasswordMatch" | translate}}</div>
                   </div>
               </div>
-          </div>
+          <!-- </div> -->
           <div class="text-center">
-              <button  type="submit" class="btn btn-primary mr-1">{{"FormActions.Register" | translate}}</button>
-              <button class="btn btn-secondary" type="reset" (click)="onReset()">{{"FormActions.Cancel" | translate}}</button>
+              <button  [disabled]='registerForm.invalid'  class="btn btn-primary mr-1">{{"FormActions.Register" | translate}}</button>
+              <button class="btn btn-secondary mr-2" type="reset" (click)="onReset()">{{"FormActions.Cancel" | translate}}</button>
           </div>
       </form>
   </div>
