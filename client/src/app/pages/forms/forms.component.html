@@ -38,7 +38,10 @@
     </div>
 </app-modal>
 <app-modal id="modal-2">
-    <h1>A Custom Modal!</h1>
-    <p>Home page text: <input type="text" /></p>
+   <app-identity-card></app-identity-card>
     <button class="btn btn-info" (click)="closeModal('modal-2')">Identity card</button>
 </app-modal>
+<app-modal id="modal-3">
+    <app-identity-card></app-identity-card>
+     <button class="btn btn-info" (click)="closeModal('modal-3')">Identity card</button>
+ </app-modal>

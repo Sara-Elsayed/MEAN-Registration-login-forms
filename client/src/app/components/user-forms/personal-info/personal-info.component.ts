@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-// import { TranslateService } from '@ngx-translate/core';
 
 import listsEn from '../../../../assets/i18n/listsEn.json';
 import  { Country } from '../../../models/country.model';
+
+import {TranslateService, LangChangeEvent} from '@ngx-translate/core';
 
 
 
@@ -13,16 +14,29 @@ import  { Country } from '../../../models/country.model';
 })
 export class PersonalInfoComponent implements OnInit {
    
-  Countries:Country[] = listsEn.Countries;
+  CountriesObjects:Country[] = listsEn.Countries;
+  Countrieslist:Array<string> = []
+  Countries:Array<string> ;
+  public browserLang: string;
 
-  constructor() {
-    // console.log(countries.Countries)
-
+  constructor(private translateService: TranslateService) {
+    this.translateService.onLangChange.subscribe(event=>{
+      this.browserLang = event.lang;
+      if (this.browserLang === "en"){
+        console.log(this.browserLang)
+        this.CountriesObjects.forEach(element => {
+          this.Countrieslist.push(element.nationality_english)   
+        });
+       this.Countries = this.Countrieslist;
+      }else{
+        this.CountriesObjects.forEach(element => {
+          this.Countrieslist.push(element.nationality_arabic)
+        });
+       this.Countries = this.Countrieslist;
+      }
+    })
   }
- 
-  
-  ngOnInit() {
 
-  }
+  ngOnInit() {}
 
 }

@@ -30,6 +30,7 @@ export class NavbarComponent implements OnInit {
    }
   changeLang(lang){
     this.languageService.changeLanguage(lang);
+    //this.subject.next(lang)
   }
   
 

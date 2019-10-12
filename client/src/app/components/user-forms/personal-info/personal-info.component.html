@@ -115,8 +115,8 @@
                     </div>
                     <div class="col-sm-4">
                       <select id="nationality" formControlName="nationality">
-                        <option *ngFor="let country of Countries" [value]="country.NationalityID">
-                          {{country.Nationality}}
+                        <option *ngFor="let country of Countries">
+                          {{country}}
                         </option>
                       </select>
                     </div>
