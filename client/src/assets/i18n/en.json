@@ -35,6 +35,31 @@
         "CountryArea": "Country area",
         "PhoneCode": "Phone code",
         "MesuringSystem": "Mesuring system used"
+    },
+    "FormsPage": {
+        "PersonalInfo": "Personal info",
+        "IdentityCard": "Identity card"
+    },
+    "PersonalInformationForm": {
+        "FullName": "FULL NAME",
+        "FirstName": "First name",
+        "SecondName": "Second name", 
+        "ThirdName": "Third name",
+        "FourthName": "Fourth name",
+        "LastName": "Last name",
+        "OtherInfo": "Other info",
+        "Title": "Title",
+        "Gender": "Gender",
+        "Nationality": "Nationality"
+    },
+    "PersonalInformationValidation": {
+        "firstName": "First name is required",
+        "secondName": "Second name is required", 
+        "thirdName": "Third name is required",
+        "fourthName": "Fourth name is required",
+        "lastName": "Last name is required",
+        "title": "Title is required",
+        "gender": "Gender is required",
+        "nationality": "Please choose your nationality"
     }
-    
 }

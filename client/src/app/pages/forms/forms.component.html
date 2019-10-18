@@ -1,25 +1,25 @@
 <div class="container forms">
     <div class="row">
         <div class="col d-flex justify-content-center">
-            <button class="btn" (click)="openModal('modal-1')">Personal Info</button>
+            <button class="btn" (click)="openModal('modal-1')">{{"FormsPage.PersonalInfo" | translate}}</button>
         </div>
         <div class="col d-flex justify-content-center">
-            <button class="btn" (click)="openModal('modal-2')">Identity Card</button>
+            <button class="btn" (click)="openModal('modal-2')">{{"FormsPage.IdentityCard" | translate}}</button>
         </div>
         <div class="col d-flex justify-content-center">
-            <button class="btn" (click)="openModal('modal-3')">Personal Info</button>
+            <button class="btn" (click)="openModal('modal-3')">{{"FormsPage.PersonalInfo" | translate}}</button>
         </div>
     </div>
     <div class="devider__rows"></div>
     <div class="row">
         <div class="col d-flex justify-content-center">
-            <button class="btn" (click)="openModal('modal-1')">Personal Info</button>
+            <button class="btn" (click)="openModal('modal-1')">{{"FormsPage.PersonalInfo" | translate}}</button>
         </div>
         <div class="col d-flex justify-content-center">
-            <button class="btn" (click)="openModal('modal-2')">Identity Card</button>
+            <button class="btn" (click)="openModal('modal-2')">{{"FormsPage.IdentityCard" | translate}}</button>
         </div>
         <div class="col d-flex justify-content-center">
-            <button class="btn" (click)="openModal('modal-3')">Personal Info</button>
+            <button class="btn" (click)="openModal('modal-3')">{{"FormsPage.PersonalInfo" | translate}}</button>
         </div>
     </div>
 </div>
@@ -39,9 +39,9 @@
 </app-modal>
 <app-modal id="modal-2">
    <app-identity-card></app-identity-card>
-    <button class="btn btn-info" (click)="closeModal('modal-2')">Identity card</button>
+    <button class="btn btn-info" (click)="closeModal('modal-2')">{{"FormsPage.IdentityCard" | translate}}</button>
 </app-modal>
 <app-modal id="modal-3">
     <app-identity-card></app-identity-card>
-     <button class="btn btn-info" (click)="closeModal('modal-3')">Identity card</button>
+     <button class="btn btn-info" (click)="closeModal('modal-3')">{{"FormsPage.IdentityCard" | translate}}</button>
  </app-modal>

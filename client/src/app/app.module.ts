@@ -19,9 +19,9 @@ import { LoginModule } from './components/login/login.module';
 import { RegistrationModule } from './components/registration/registration.module';
 import { SettingsModule } from './settings/settings.module';
 
+
 import { CountryFormComponent } from './components/country-form/country-form.component';
 
-import { PersonalInfoComponent } from './components/user-forms/personal-info/personal-info.component';
 import { IdentityCardComponent } from './components/user-forms/identity-card/identity-card.component';
 
 import { HomeComponent } from './pages/home/home.component';
@@ -29,6 +29,7 @@ import { FormsComponent } from './pages/forms';
 
 import { ModalModule } from './components/modal';
 import { NavbarComponent } from './shared/layout/navbar/navbar.component';
+import { PersonalInfoModule } from './components/user-forms/personal-info/personal-info.module';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -40,7 +41,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
 
     CountryFormComponent,
-    PersonalInfoComponent,
     IdentityCardComponent,
 
     HomeComponent,
@@ -59,6 +59,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FlexLayoutModule,
     HttpClientModule,
     ModalModule,
+    PersonalInfoModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

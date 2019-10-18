@@ -2,18 +2,28 @@
       <div class="row">
         <div class="col">
           <div class="form--style__heading">
-            FULL NAME
+            {{"PersonalInformationForm.FullName" | translate}}
           </div>
-          <form>
+          
+          <form [formGroup]="personalInformationForm">
             <div class="row ">
               <div class="col-lg-5 col-md-12 col-sm-12">
                 <div class="form-group">
                   <div class="row justify-content-center">
                     <div class="col-sm-5">
-                      <label for="firstName">First name<span class="required">*</span></label>
+                      <label for="firstName">
+                        {{"PersonalInformationForm.FirstName" | translate}}
+                        <span class="required">*</span>
+                      </label>
                     </div>
                     <div class="col-sm-4">
-                      <input id="firstName" formControlName="firstName" type="text">
+                      <input class="form-control" formControlName="firstName" type="text" 
+                      [ngClass]="{'is-invalid': f.firstName.errors && (f.firstName.dirty || f.firstName.touched)}"/>
+                      <div *ngIf="f.firstName.errors && (f.firstName.dirty || f.firstName.touched)">
+                        <div *ngIf="f.firstName.errors && (f.firstName.dirty || f.firstName.touched)">
+                          {{"PersonalInformationValidation.firstName" | translate }}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -22,36 +32,18 @@
                 <div class="form-group">
                   <div class="row justify-content-center">
                     <div class="col-sm-5">
-                      <label for="secondName">Second name<span class="required">*</span></label>
+                      <label for="secondName">
+                        {{"PersonalInformationForm.SecondName" | translate}}
+                        <span class="required">*</span></label>
                     </div>
                     <div class="col-sm-4">
-                      <input id="secondName" formControlName="secondName" type="text">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-5 col-md-12 col-sm-12">
-                <div class="form-group">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-5">
-                      <label for="thirdName">Third name<span class="required">*</span></label>
-                    </div>
-                    <div class="col-sm-4">
-                      <input id="thirdName" formControlName="thirdName" type="text">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-5 col-md-12 col-sm-12">
-                <div class="form-group">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-5">
-                      <label for="fourthName">Fourth name<span class="required">*</span></label>
-                    </div>
-                    <div class="col-sm-4">
-                      <input id="fourthName" formControlName="fourthName" type="text">
+                      <input class="form-control" formControlName="secondName" type="text"
+                        [ngClass]="{'is-invalid': f.secondName.errors && (f.secondName.dirty || f.secondName.touched)}"/>
+                      <div *ngIf="f.secondName.errors && (f.secondName.dirty || f.secondName.touched)">
+                        <div *ngIf="f.secondName.errors && (f.secondName.dirty || f.secondName.touched)">
+                          {{"PersonalInformationValidation.secondName" | translate }}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -62,10 +54,60 @@
                 <div class="form-group">
                   <div class="row justify-content-center">
                     <div class="col-sm-5">
-                      <label for=" lastName">Last name<span class="required">*</span></label>
+                      <label for="thirdName">
+                        {{"PersonalInformationForm.ThirdName" | translate}}
+                        <span class="required">*</span></label>
                     </div>
                     <div class="col-sm-4">
-                      <input id=" lastName" formControlName=" lastName" type="text">
+                      <input class="form-control" formControlName="thirdName" type="text"
+                        [ngClass]="{'is-invalid': f.thirdName.errors && (f.thirdName.dirty || f.thirdName.touched)}"/>
+                      <div *ngIf="f.thirdName.errors && (f.thirdName.dirty || f.thirdName.touched)">
+                        <div *ngIf="f.thirdName.errors && (f.thirdName.dirty || f.thirdName.touched)">
+                          {{"PersonalInformationValidation.thirdName" | translate }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <div class="row justify-content-center">
+                    <div class="col-sm-5">
+                      <label for="fourthName">
+                        {{"PersonalInformationForm.FourthName" | translate}}
+                        <span class="required">*</span></label>
+                    </div>
+                    <div class="col-sm-4">
+                      <input formControlName="fourthName" type="text" class="form-control"
+                        [ngClass]="{'is-invalid': f.fourthName.errors && (f.fourthName.dirty || f.fourthName.touched)}"/>
+                      <div *ngIf="f.fourthName.errors && (f.fourthName.dirty || f.fourthName.touched)">
+                        <div *ngIf="f.fourthName.errors && (f.fourthName.dirty || f.fourthName.touched)">
+                          {{"PersonalInformationValidation.fourthName" | translate }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-5 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <div class="row justify-content-center">
+                    <div class="col-sm-5">
+                      <label for=" lastName">
+                        {{"PersonalInformationForm.LastName" | translate}}
+                        <span class="required">*</span></label>
+                    </div>
+                    <div class="col-sm-4">
+                      <input formControlName="lastName" type="text" class="form-control"
+                        [ngClass]="{'is-invalid': f.lastName.errors && (f.lastName.dirty || f.lastName.touched)}"/>
+                      <div *ngIf="f.lastName.errors && (f.lastName.dirty || f.lastName.touched)">
+                        <div *ngIf="f.lastName.errors && (f.lastName.dirty || f.lastName.touched)">
+                          {{"PersonalInformationValidation.lastName" | translate }}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -74,7 +116,7 @@
             <div class="row">
               <div class="col">
                 <div class="form--style__heading">
-                  OTHER INFO
+                  {{"PersonalInformationForm.OtherInfo" | translate}}
                 </div>
               </div>
             </div>
@@ -83,10 +125,12 @@
                 <div class="form-group">
                   <div class="row justify-content-center">
                     <div class="col-sm-5">
-                      <label for="title">Title</label>
+                      <label for="title">
+                        {{"PersonalInformationForm.Title" | translate}}
+                      </label>
                     </div>
                     <div class="col-sm-4">
-                      <input id="title" formControlName="title" type="text">
+                      <input class="form-control" formControlName="title" type="text">
                     </div>
                   </div>
                 </div>
@@ -96,10 +140,12 @@
                 <div class="form-group">
                   <div class="row justify-content-center">
                     <div class="col-sm-5">
-                      <label for="gender"> Gender</label>
+                      <label for="gender">
+                        {{"PersonalInformationForm.Gender" | translate}}
+                      </label>
                     </div>
                     <div class="col-sm-4">
-                      <input id="gender" formControlName="gender" type="text">
+                      <input class="form-control" formControlName="gender" type="text">
                     </div>
                   </div>
                 </div>
@@ -111,14 +157,22 @@
                 <div class="form-group">
                   <div class="row justify-content-center">
                     <div class="col-sm-5">
-                      <label for="nationality">Nationality</label>
+                      <label for="nationality">
+                        {{"PersonalInformationForm.Nationality" | translate}}
+                      </label>
                     </div>
                     <div class="col-sm-4">
-                      <select id="nationality" formControlName="nationality">
+                      <select formControlName="nationality" class="form-control"
+                        [ngClass]="{'is-invalid': f.nationality.errors && (f.nationality.dirty || f.nationality.touched)}">
                         <option *ngFor="let country of Countries">
                           {{country}}
                         </option>
                       </select>
+                      <div *ngIf="f.nationality.errors && (f.nationality.dirty || f.nationality.touched)">
+                        <div *ngIf="f.nationality.errors && (f.nationality.dirty || f.nationality.touched)">
+                          {{"PersonalInformationValidation.nationality" | translate }}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

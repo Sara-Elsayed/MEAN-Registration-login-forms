@@ -7,6 +7,7 @@ import { SettingsComponent } from "./settings/settings.component";
 
 import { HomeComponent } from './pages/home/home.component';
 import { FormsComponent } from './pages/forms';
+import { PersonalInfoComponent } from './components/user-forms/personal-info';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "home" },
@@ -20,7 +21,12 @@ const routes: Routes = [
       { path: "settings", component: SettingsComponent },
     ]
   },
-  { path : "forms", component: FormsComponent},
+  { path : "forms", component: FormsComponent,
+     children: [
+    {path: "", pathMatch: "full", redirectTo: "personal-info"},
+    {path: "personal-info", component: PersonalInfoComponent},
+  ]
+},
 ];
 
 @NgModule({

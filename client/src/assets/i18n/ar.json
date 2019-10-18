@@ -12,9 +12,9 @@
   },
   "VALIDATION": {
     "userName": "اسم المستخدم مطلوب",
-    "userNameCharacters":"اسم المستخدم يجب أن لا يقل عن ستة أحرف",
-    "Email":"البريد الإلكتروني مطلوب",
-    "ValidEmail":"يجب أن يكون البريد الإلكتروني عنوان بريد إلكتروني صالح",
+    "userNameCharacters": "اسم المستخدم يجب أن لا يقل عن ستة أحرف",
+    "Email": "البريد الإلكتروني مطلوب",
+    "ValidEmail": "يجب أن يكون البريد الإلكتروني عنوان بريد إلكتروني صالح",
     "Password": "كلمة المرور مطلوبة",
     "PasswordCharacters": "كلمة المرور يجب أن تكون مكونة على الأقل من ستة ",
     "ConfirmPassword": "تأكيد كلمة المرور مطلوب",
@@ -22,18 +22,44 @@
   },
   "FormActions": {
     "Register": "التسجيل",
-    "Login":"تسجيل الدخول",
+    "Login": "تسجيل الدخول",
     "Cancel": "إلغاء"
   },
   "CountryForm": {
-    "Title":"من فضلك ادخل بيانات البلد التي تريد إضافتها",
-    "CountryName":"إسم الدولة",
-    "Capital":"العاصمة",
-    "Continent":"القارة",
-    "Language":"اللغة الرسمية للدولة",
-    "CurrencyCode":"العملة",
-    "CountryArea":"المساحة",
-    "PhoneCode" : "كود الدولة",
-    "MesuringSystem":"وحدة القياس المستخدمة"
+    "Title": "من فضلك ادخل بيانات البلد التي تريد إضافتها",
+    "CountryName": "إسم الدولة",
+    "Capital": "العاصمة",
+    "Continent": "القارة",
+    "Language": "اللغة الرسمية للدولة",
+    "CurrencyCode": "العملة",
+    "CountryArea": "المساحة",
+    "PhoneCode": "كود الدولة",
+    "MesuringSystem": "وحدة القياس المستخدمة"
+  },
+  "FormsPage": {
+      "PersonalInfo": "المعلومات الشخصية",
+      "IdentityCard": "تحقيق الشخصية"
+  },
+  "PersonalInformationForm": {
+    "FullName": "الاسم كاملاً",
+    "FirstName": "الاسم الأول",
+    "SecondName": "الاسم الثاني",
+    "ThirdName": "الاسم الثالث",
+    "FourthName": "الاسم الرابع",
+    "LastName": "الاسم الأخير",
+    "OtherInfo": "معلومات أخرى",
+    "Title": "اللقب",
+    "Gender": "الجنس",
+    "Nationality": "الجنسية"
+  },
+  "PersonalInformationValidation": {
+    "firstName": "الاسم الأول مطلوب",
+    "secondName": "الاسم الثاني مطلوب", 
+    "thirdName": "الاسم الثالث مطلوب",
+    "fourthName": "الاسم الرابع مطلوب",
+    "lastName": "اسم العائلة مطلوب",
+    "title": "هذا الحقل مطلوب",
+    "gender": "اختيار الجنس مطلوب",
+    "nationality": "من فضلك اختر جنسيتك"
 }
 }
